@@ -23,7 +23,7 @@ function memoize(fn) {
     };
 }
 
-function slowFib(n) {
+function fib(n) {
   if ( n < 2 ) {
     return n;
   }
@@ -31,8 +31,11 @@ function slowFib(n) {
 }
 
 
-const fib = memoize(slowFib);
+fib = memoize(fib);
 
+
+
+module.exports = fib;
 
 // function fib(n) {
 //     const result = [0, 1];
@@ -47,6 +50,3 @@ const fib = memoize(slowFib);
 //     return result[n];
 
 // }
-
-
-module.exports = fib;

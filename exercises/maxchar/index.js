@@ -10,7 +10,7 @@ function maxChar(str) {
     let max = 0;
     let maxChar = '' ;
 
-    debugger
+    debugger;
     for (let char of str) {
         if (!charMap[char]) {
             charMap[char]++;
